@@ -7,3 +7,10 @@ python-multipart
 passlib[bcrypt]
 pyjwt
 alembic
+gunicorn
+
+
+
+
+
+
