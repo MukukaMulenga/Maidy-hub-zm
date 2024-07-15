@@ -1,6 +1,17 @@
-from fastapi import FastAPI 
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware  
 
 app = FastAPI()
+
+allowed_hosts = ['https://maidy-hub--zm.web.app/']
+
+@app.middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=['*'],
+        allow_methods=['*'],
+        allow_headers=['*'],       
+)
 
 @app.get('/',tags=['root'])
 async def getDefault():
