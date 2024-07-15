@@ -3,12 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-allowed_hosts = ['https://maidy-hub--zm.web.app']
+origins = ['https://maidy-hub--zm.web.app','http://localhost:5173']
 
 app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],
-        allow_credentials=['*'],
+        allow_origins=origins,
+        allow_credentials=True,
         allow_methods=['*'],
         allow_headers=['*'],       
 )
@@ -24,6 +24,6 @@ async def getDefault():
 async def getUsers():
     return {
         
-            'users': [{'name':"Mukuka Mulenga",'program':"Diploma in computerr studies"}]
+            'users': {'name':"Mukuka Mulenga",'program':"Diploma in computerr studies"}
 
             }
