@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+SQLAlchemy
+mysqlclient
+mysql-connector-python
+python-multipart
+passlib[bcrypt]
+pyjwt
+alembic
