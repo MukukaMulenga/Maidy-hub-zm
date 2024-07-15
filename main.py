@@ -3,9 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-allowed_hosts = ['https://maidy-hub--zm.web.app/']
+allowed_hosts = ['https://maidy-hub--zm.web.app']
 
-@app.middleware(
+app.add_middleware(
         CORSMiddleware,
         allow_origins=["*"],
         allow_credentials=['*'],
