@@ -12,7 +12,7 @@ async def getDefault():
 @app.get('/api/users',tags=['users'])
 async def getUsers():
     return {
-        [
-            {'name':"Mukuka Mulenga",'program':"Diploma in computerr studies"}
-        ]
-    }
+        
+            'users': [{'name':"Mukuka Mulenga",'program':"Diploma in computerr studies"}]
+
+            }
